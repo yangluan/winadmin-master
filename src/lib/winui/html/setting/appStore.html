@@ -1,0 +1,89 @@
+<script>
+    layui.link(winui.path + 'css/appStore.css');
+</script>
+
+<div class="layui-tab">
+    <ul class="layui-tab-title">
+        <li class="layui-this">推荐应用</li>
+        <li>游戏应用</li>
+        <li>电脑安全</li>
+        <li>应用管理</li>
+        <li>订单管理</li>
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">
+            <div id="btnGroups">
+                <button class="layui-btn layui-btn-normal">
+                    <a href="https://www.portablesoft.org/down/339/">谷歌浏览器下载</a>
+                </button>
+                <button class="layui-btn layui-btn-normal">
+                    <a href="http://wm.makeding.com/iclk/?zoneid=22813">Xshell下载</a>
+                </button>
+
+            </div>
+        </div>
+        <div class="layui-tab-item">
+            <button class="layui-btn layui-btn-normal">信泰赛车</button>
+        </div>
+        <div class="layui-tab-item">
+            <button class="layui-btn layui-btn-normal">信泰枪击</button>
+        </div>
+        <div class="layui-tab-item">
+            <button class="layui-btn layui-btn-normal">信泰桌球</button>
+        </div>
+        <div class="layui-tab-item">
+            <button class="layui-btn layui-btn-normal">信泰娱乐</button>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+<script>
+    layui.use(['layer', 'form'], function (exports) {
+        var $ = layui.jquery, form = layui.form, unfinished = '暂未实现';
+
+        $(function () {
+
+
+            //注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+            layui.use('element', function(){
+                var element = layui.element;
+                //…
+            });
+
+
+
+
+
+            // down url
+            //   谷歌 https://www.portablesoft.org/down/339/
+            //   Xshell     http://wm.makeding.com/iclk/?zoneid=22813
+
+
+            // $('#btnGroups button').click(function () {
+            //     layer.confirm('你确定要下载吗？', {
+            //         type:1,
+            //         btn: ['按钮一', '按钮二', '按钮三'] //可以无限个按钮
+            //         ,btn3: function(index, layero){
+            //             //按钮【按钮三】的回调
+            //         }
+            //     }, function(index, layero){
+            //         //按钮【按钮一】的回调
+            //     }, function(index){
+            //         //按钮【按钮二】的回调
+            //     });
+            // });
+
+
+
+        })});
+
+
+
+
+
+</script>

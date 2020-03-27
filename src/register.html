@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="renderer" content="webkit">
+    <title>注册页</title>
+    <link href="./lib/layui/css/layui.css" rel="stylesheet"/>
+    <link href="./lib/animate/animate.min.css" rel="stylesheet"/>
+    <link href="./lib/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet"/>
+    <link href="./lib/winui/css/winui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="logincss/register.css">
+</head>
+<body>
+
+<div class="layui-container" id="winDesKbg">
+    <form class="layui-form lale" action="">
+        <div class="layui-row">
+            <div class="layui-col-md12 iptWin">
+                <div class="layui-input-block iptWin">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入设备SN码"
+                           class="layui-input">
+                </div>
+            </div>
+            <div class="layui-col-md12">
+                <div class="layui-input-block iptWin">
+                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入手机号"
+                           class="layui-input">
+                </div>
+            </div>
+            <div class="layui-col-md12">
+                <div class="layui-col-md9">
+                    <div class="layui-form-item">
+                        <div class="layui-input-block iptWin">
+                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入验证码"
+                                   class="layui-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="btnle layui-col-md-offset10">
+                    <button type="submit" class="layui-btn" lay-submit="" lay-filter="">获取验证码</button>
+                </div>
+            </div>
+
+            <div class="layui-col-md12">
+                <div class="layui-col-md-offset1">
+                    <button type="submit" class="layui-btn layui-btn-fluid bgBtn" lay-submit="" lay-filter="demo1">注册
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+</div>
+
+
+</body>
+</html>
+
+<!--layui.js-->
+<script src="./lib/layui/layui.js"></script>
+<script>
+    layui.config({
+        base: './js/' //指定 index.js 路径
+        , version: '1.0.0-beta'
+    }).use('register');
+</script>

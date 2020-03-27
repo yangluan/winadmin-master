@@ -1,0 +1,52 @@
+<script>
+    layui.link(winui.path + 'css/theme.css');
+    layui.link(winui.path + 'css/testy.css');
+</script>
+
+<div class="winui-tab" style="height:100%">
+    <div class="win-mar">
+        <h1>测试</h1>
+    </div>
+
+<!--  按钮  -->
+    <button id="winBt" class="winBt winui-btn winui-btn +">默认背景</button>
+    <button id="" class="resetBt winui-btn winui-btn +">重置主题色</button>
+    <button class="bgsetBt winui-btn winui-btn +">全屏</button>
+<!--  开关  -->
+    <div class="layui-form winui-switch" style="margin-left: 20px">
+        <input type="checkbox" lay-filter="toggle" lay-skin="switch">
+    </div>
+<!--  单选  -->
+    <div class="layui-form winui-radio taskbar-position" style="margin-left: 20px;margin-top: 20px">
+        <input type="radio" name="position" title="呵呵">
+        <input type="radio" name="position" title="哈哈">
+        <input type="radio" name="position" title="嘻嘻">
+        <input type="radio" name="position" title="嘎嘎">
+    </div>
+</div>
+<script src="lib/winui/js/theme.js"></script>
+<script>
+    layui.use(['layer', 'form'], function (exports) {
+        var $ = layui.jquery, form = layui.form, unfinished = '暂未实现';
+        $(function () {
+            $('.winBt').on('click',function () {
+                $(document.body).css({
+                    'backgroundImage':'',
+                });
+            });
+
+        });
+        $('.resetBt').on('click',function () {
+            winui.resetColor('#999');
+        })
+        $('.bgsetBt').on('click',function () {
+            winui.exitFullScreen();
+        })
+
+    })
+
+
+
+
+
+</script>

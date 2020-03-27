@@ -1,0 +1,51 @@
+<script>
+    layui.link(winui.path + 'css/http.css');
+</script>
+
+
+
+<table class="layui-table">
+    <colgroup>
+        <col width="150">
+        <col width="200">
+        <col>
+    </colgroup>
+    <thead>
+    <tr>
+        <th>所在城市</th>
+        <th>ip地址</th>
+        <th>本地邮编</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td id="city"></td>
+        <td id="ip"></td>
+        <td id="sole"></td>
+    </tr>
+    </tbody>
+</table>
+
+
+<script>
+    layui.use(['layer', 'form'], function (exports) {
+        var $ = layui.jquery, form = layui.form, unfinished = '暂未实现';
+
+        $(function () {
+            //获取本机ip地址并展示
+            $.ajax({
+                url: 'http://pv.sohu.com/cityjson?ie=utf-8',
+                dataType: "script",
+                success: function(){
+                    $('#city').html(returnCitySN.cname);
+                    $('#ip').html(returnCitySN.cip);
+                    $('#sole').html(returnCitySN.cid);
+                }
+            });
+
+
+
+
+
+        })});
+</script>

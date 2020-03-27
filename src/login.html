@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <meta name="renderer" content="webkit">
+    <title>仿PC W10操作系统</title>
+    <link href="./lib/layui/css/layui.css" rel="stylesheet"/>
+    <link href="./lib/animate/animate.min.css" rel="stylesheet"/>
+    <link href="./lib/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet"/>
+    <link href="./lib/winui/css/winui.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="logincss/login.css">
+</head>
+<body>
+
+
+<div class="layui-container" id="winDesKbg">
+    <div class="layui-row">
+        <form class="layui-form lale" action="">
+            <div class="layui-col-md9">
+                <div class="layui-form-item">
+                    <div class="layui-input-inline" id="iptWith">
+                        <input type="text" name="title" lay-verify="title" autocomplete="off"
+                               placeholder="请输入使用说明书上的访问地址" class="layui-input">
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md3">
+                <button type="submit" class="layui-btn btnle" lay-submit="" lay-filter="demo1">访问</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+<!--layui.js-->
+<script src="./lib/layui/layui.js"></script>
+<script>
+    layui.config({
+        base: './js/' //指定 index.js 路径
+        , version: '1.0.0-beta'
+    }).use('login');
+</script>

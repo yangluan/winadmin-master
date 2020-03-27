@@ -1,0 +1,29 @@
+.titleTop{
+    margin-top: 20px;
+}
+
+
+
+.laySeleGr{
+    width: 100%;
+    height: 80px;
+}
+.content_le{
+    float: left;
+    width: 400px;
+    height: 100%;
+}
+.content_Ri{
+    float: right;
+}
+.content_Ri input{
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+}
+.bgBtn{
+    width: 414px;
+    height: 53px;
+    /*margin-left: 40%;*/
+    margin-top: 30px;
+}

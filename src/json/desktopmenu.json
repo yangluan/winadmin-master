@@ -1,0 +1,28 @@
+﻿{
+  "code": 1,
+  "message": "成功",
+  "data": [
+    {
+      "title": "主题",
+      "pageURL": "theme",
+      "name": "主题",
+      "icon": "fa-television",
+      "openType": 1,
+      "maxOpen": -1,
+      "extend": false,
+      "childs": null,
+      "id": 1
+    },
+    {
+      "title": "测试",
+      "pageURL": "lib/winui/html/setting/testy.html",
+      "name": "测试",
+      "icon": "fa-television",
+      "openType": 1,
+      "maxOpen": -1,
+      "extend": false,
+      "childs": null,
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,400 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="renderer" content="webkit">
+    <title>yla</title>
+    <link href="./lib/layui/css/layui.css" rel="stylesheet" />
+    <link href="./lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="./lib/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" />
+    <link href="./lib/winui/css/winui.css" rel="stylesheet" />
+    <style>
+        body {
+            background-image: url(images/bg_01.jpg);
+        }
+        .createTxtBox{
+            width: 100px;
+            height: 50px;
+            float: left;
+            margin-left: 20px;
+            margin-top: 20px;
+            background-color: deeppink;
+            text-align: center;
+            font-size: 30px;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+<!-- 桌面 -->
+<div class="winui-desktop" id="wiNuiDeskTop">
+    <!--API自动加载-->
+<!--    <ul></ul>-->
+</div>
+
+<!-- 开始菜单 -->
+<div class="winui-start stopPropagation layui-hide">
+    <!-- 左边设置 -->
+    <div class="winui-start-left">
+        <div class="winui-start-item bottom" data-text="个人中心"><i class="fa fa-user"></i></div>
+        <div class="winui-start-item winui-start-individuation bottom" data-text="主题设置"><i class="fa fa-cog"></i></div>
+        <div class="winui-start-item bottom logout" data-text="注销登录"><i class="fa fa-power-off"></i></div>
+    </div>
+    <!-- 中间导航 -->
+    <div class="winui-start-center">
+        <div class="layui-side-scroll">
+            <ul class="winui-menu layui-nav layui-nav-tree" lay-filter="winuimenu"></ul>
+        </div>
+    </div>
+    <!-- 右边磁贴 -->
+    <div class="winui-start-right">
+        <div class="layui-side-scroll">
+            <div class="winui-nav-tile">
+                <div class="winui-tilebox">
+                    <div class="winui-tilebox-head">应用商店</div>
+                    <div class="winui-tilebox-body">
+                        <div class="winui-tile winui-tile-normal">
+                            <i class="fa fa-fw fa-adjust"></i>
+                            <span>应用</span>
+                        </div>
+                        <div class="winui-tile winui-tile-normal">
+                            <i class="fa fa-fw fa-circle-o-notch"></i>
+                            <span>应用</span>
+                        </div>
+                        <div class="winui-tile winui-tile-normal">
+                            <i class="fa fa-fw fa-list-alt"></i>
+                            <span>应用</span>
+                        </div>
+                        <div class="winui-tile winui-tile-normal">
+                            <i class="fa fa-fw fa-window-maximize"></i>
+                            <span>应用</span>
+                        </div>
+                        <div class="winui-tile winui-tile-long">
+                            <p style="font-size:30px;font-family:'STKaiti';">Tab</p>
+                            <span>应用</span>
+                        </div>
+                        <div class="winui-tile winui-tile-long">
+                            <i class="fa fa-fw fa-spin fa-spinner"></i>
+                            <span>应用</span>
+                        </div>
+                        <div class="winui-tile winui-tile-normal">
+                            <i class="fa fa-fw fa-spin fa-refresh"></i>
+                            <span>应用</span>
+                        </div>
+                        <div class="winui-tile winui-tile-normal">
+                            <i class="fa fa-fw fa-calendar"></i>
+                            <span>应用</span>
+                        </div>
+                        <div class="winui-tile winui-tile-long">
+                            <i class="fa fa-fw fa-clock-o"></i>
+                            <span>应用</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="winui-tilebox">
+                    <div class="winui-tilebox-head">推荐应用</div>
+                    <div class="winui-tilebox-body">
+                        <div class="winui-tile winui-tile-long">
+                            <i class="fa fa-file-text"></i>
+                            <span>应用</span>
+                        </div>
+                        <div class="winui-tile winui-tile-normal">
+                            <i class="fa fa-file-text"></i>
+                            <span>应用</span>
+                        </div>
+                        <div class="winui-tile winui-tile-normal">
+                            <img src="images/logo_100.png" />
+                            <span>应用</span>
+                        </div>
+                        <div class="winui-tile winui-tile-normal">
+                            <i class="fa fa-file-text"></i>
+                            <span>应用</span>
+                        </div>
+                        <div class="winui-tile winui-tile-normal">
+                            <img src="images/qzone_32.png" />
+                            <span>应用</span>
+                        </div>
+                        <div class="winui-tile winui-tile-normal">
+                            <i class="fa fa-photo fa-fw"></i>
+                            <span>应用</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="winui-tilebox">
+                    <div class="winui-tilebox-head">热门应用</div>
+                    <div class="winui-tilebox-body">
+                        <div class="winui-tile winui-tile-normal">
+                            <i class="fa fa-file-text"></i>
+                            <span>应用</span>
+                        </div>
+                        <div class="winui-tile winui-tile-normal">
+                            <i class="fa fa-file-text"></i>
+                            <span>应用</span>
+                        </div>
+                        <div class="winui-tile winui-tile-normal">
+                            <i class="fa fa-file-text"></i>
+                            <span>应用</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="winui-tilebox">
+                    <div class="winui-tilebox-head">畅销应用</div>
+                    <div class="winui-tilebox-body">
+                        <div class="winui-tile winui-tile-long">
+                            <i class="fa fa-file-text"></i>
+                            <span>应用</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 任务栏 -->
+<div class="winui-taskbar" id="taskbarBox">
+    <!-- 开始菜单触发按钮 -->
+    <div class="winui-taskbar-start sp"><i class="fa fa-windows"></i></div>
+
+
+
+
+    <!--  固定任务栏  -->
+    <ul class="winui-taskbar-fixedTask" id="fixedBar">
+<!--        <li class="winui-taskbar-fixedTask-item">-->
+<!--            <i class="fa fa-windows"></i>-->
+<!--        </li>-->
+<!--        <li class="winui-taskbar-fixedTask-item">-->
+<!--            <i class="fa fa-windows"></i>-->
+<!--        </li>-->
+<!--        <li class="winui-taskbar-fixedTask-item">-->
+<!--            <i class="fa fa-windows"></i>-->
+<!--        </li>-->
+<!--        <li class="winui-taskbar-fixedTask-item">-->
+<!--            <i class="fa fa-windows"></i>-->
+<!--        </li>-->
+    </ul>
+
+
+
+
+
+
+    <!-- 任务项 -->
+    <ul class="winui-taskbar-task">
+<!--        <li class="winui-task-item">默认任务</li>-->
+<!--        <li class="winui-task-item">默认任务</li>-->
+<!--        <li class="winui-task-item">默认任务</li>-->
+<!--        <li class="winui-task-item">默认任务</li>-->
+<!--        <li class="winui-task-item" id="lastTest">默认任务</li>-->
+
+    </ul>
+    <!-- 任务栏时间 -->
+    <div class="winui-taskbar-time"></div>
+    <!-- 控制中心 -->
+    <div class="winui-taskbar-console sp"><i class="fa fa-comment-o"></i></div>
+    <!-- 显示桌面 -->
+    <div class="winui-taskbar-desktop"></div>
+</div>
+
+<!--控制中心-->
+<div class="winui-console layui-hide slideOutRight sp">
+    <h1>最新通知</h1>
+    <div class="winui-message">
+        <div class="layui-side-scroll">
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+            <div class="winui-message-item">
+                <h2>钉钉收到一条消息</h2>
+                <div class="content">
+                    今天晚上我请客！
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="winui-shortcut">
+        <h2><span class="extend-switch sp">展开</span></h2>
+        <div class="winui-shortcut-item">
+            <i class="fa fa-cog"></i>
+            <span>测试</span>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- 桌面右键弹出框   -->
+<div id="div" style="display: none;position: absolute">
+    <ul class="layui-nav layui-nav-tree" lay-filter="test">
+        <li class="layui-nav-item"><a id="reloadWin">刷新</a></li>
+        <li class="layui-nav-item layui-nav-itemed">
+            <a href="javascript:;">排序</a>
+            <dl class="layui-nav-child">
+                <dd><a href="">名称</a></dd>
+                <dd><a href="">类型</a></dd>
+            </dl>
+        </li>
+<!--        createTxtBox  -->
+        <li class="layui-nav-item"><a id="createNewTxtBox">新建文件夹</a></li>
+    </ul>
+</div>
+
+
+<!-- 鼠标右键弹出框   -->
+<div id="appDivBox" style="display: none;position: absolute">
+    <ul class="layui-nav layui-nav-tree" lay-filter="test">
+        <li class="layui-nav-item"><a id="openApp">打开应用</a></li>
+        <li class="layui-nav-item"><a>移出应用</a></li>
+    </ul>
+</div>
+
+
+
+<!--layui.js-->
+<script src="./lib/layui/layui.js"></script>
+<!--<script src="../jquery-3.1.1.js"></script>-->
+<!--<script src="../ddsort.js"></script>-->
+<script>
+
+    layui.config({
+        base: './js/' //指定 index.js 路径
+        , version: '1.0.0-beta'
+    }).use('index');
+
+    // $('#wiNuiDeskTop').DDSort({
+    //     target: 'li',
+    //     floatStyle: {
+    //         'border': '1px solid transparent',
+    //         'background-color': 'transparent'
+    //     }
+    // });
+</script>
+
+
+</body>
+</html>

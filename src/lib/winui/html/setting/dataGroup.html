@@ -1,0 +1,94 @@
+<script>
+    layui.link(winui.path + 'css/dataGroup.css');
+</script>
+
+
+
+<div id="showUpdate">
+    <button type="button" class="layui-btn" id="test1">
+        <i class="layui-icon">&#xe67c;</i>上传数据
+    </button>
+</div>
+
+<meter id="m1" value="0" min="0" max="100"></meter>
+ <div id="box">请将文件拖拽到此区域</div>
+
+<script>
+    layui.use(['layer', 'form','upload'], function (exports) {
+        var $ = layui.jquery, form = layui.form, unfinished = '暂未实现';
+        var upload = layui.upload;
+        $(function () {
+            //执行实例
+            var uploadInst = upload.render({
+                elem: '#test1' //绑定元素
+                ,url: '/upload/' //上传接口
+                ,done: function(res){
+                    //上传完毕回调
+                }
+                ,error: function(){
+                    //请求异常回调
+                }
+            });
+
+
+
+
+            var oBox = $('box');
+            var oM = $('m1');
+            var timer = null;
+            document.ondragover = function(){
+                clearTimeout(timer);
+                timer = setTimeout(function(){
+                    oBox.style.display = 'none';
+                },200);
+                oBox.style.display = 'block';
+            };
+            //进入子集的时候 会触发ondragover 频繁触发 不给ondrop机会
+            oBox.ondragenter = function(){
+                oBox.innerHTML = '请释放鼠标';
+            };
+            oBox.ondragover = function(){
+                return false;
+            };
+            oBox.ondragleave = function(){
+                oBox.innerHTML = '请将文件拖拽到此区域';
+            };
+            oBox.ondrop = function(ev){
+                var oFile = ev.dataTransfer.files[0];
+                var reader = new FileReader();
+                //读取成功
+                reader.onload = function(){
+                    console.log(reader);
+                };
+                reader.onloadstart = function(){
+                    alert('读取开始');
+                };
+                reader.onloadend = function(){
+                    alert('读取结束');
+                };
+                reader.onabort = function(){
+                    alert('中断');
+                };
+                reader.onerror = function(){
+                    alert('读取失败');
+                };
+                reader.onprogress = function(ev){
+                    var scale = ev.loaded/ev.total;
+                    if(scale>=0.5){
+                        alert(1);
+                        reader.abort();
+                    }
+                    oM.value = scale*100;
+                };
+                reader.readAsDataURL(oFile,'base64');
+                return false;
+            };
+
+
+
+        })
+
+
+
+    })
+</script>

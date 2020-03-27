@@ -1,0 +1,83 @@
+﻿{
+  "code": 1,
+  "message": "成功",
+  "data": [
+    {
+      "title": "主题",
+      "pageURL": "theme",
+      "name": "主题",
+      "icon": "fa-television",
+      "openType": 1,
+      "maxOpen": -1,
+      "extend": false,
+      "childs": null,
+      "id": 1
+    },
+    {
+      "title": "测试",
+      "pageURL": "lib/winui/html/setting/testy.html",
+      "name": "测试",
+      "icon": "fa-user-circle",
+      "openType": 1,
+      "maxOpen": -1,
+      "extend": false,
+      "childs": null,
+      "id": 2
+    },
+    {
+      "title": "资源管理器",
+      "pageURL": "lib/winui/html/setting/dataGroup.html",
+      "name": "资源管理器",
+      "icon": "fa-user-circle",
+      "openType": 1,
+      "maxOpen": -1,
+      "extend": false,
+      "childs": null,
+      "id": 3
+    },
+    {
+      "title": "应用商店",
+      "pageURL": "lib/winui/html/setting/appStore.html",
+      "name": "应用商店",
+      "icon": "fa-user-circle",
+      "openType": 1,
+      "maxOpen": -1,
+      "extend": false,
+      "childs": null,
+      "id": 4
+    },
+    {
+      "title": "网络",
+      "pageURL": "lib/winui/html/setting/http.html",
+      "name": "网络",
+      "icon": "fa-user-circle",
+      "openType": 1,
+      "maxOpen": -1,
+      "extend": false,
+      "childs": null,
+      "id": 5
+    },
+    {
+      "title": "回收站",
+      "pageURL": "lib/winui/html/setting/tsdemo.html",
+      "name": "回收站",
+      "icon": "fa-user-circle",
+      "openType": 1,
+      "maxOpen": -1,
+      "extend": false,
+      "childs": null,
+      "id": 6
+    },
+    {
+      "title": "角色管理",
+      "pageURL": "views/role/list.html",
+      "name": "角色管理",
+      "icon": "fa-th-large",
+      "openType": 1,
+      "maxOpen": -1,
+      "extend": false,
+      "childs": null,
+      "id": 7
+    }
+  ]
+}

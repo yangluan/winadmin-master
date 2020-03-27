@@ -1,0 +1,14 @@
+#winDesKbg{
+    margin-top: 71px;
+}
+#iptWith{
+    width: 100%;
+}
+#iptWith input{
+    height: 63px;
+}
+.btnle{
+    /*float: left;*/
+    margin-left: 14px;
+    margin-top: 10px;
+}
